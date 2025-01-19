@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from odoo import models, fields, api
 
 class ResPartner(models.Model):
@@ -7,6 +5,10 @@ class ResPartner(models.Model):
 
     autipe = fields.Selection([('type1', 'Type 1'), ('type2', 'Type 2'), ], string='Type', default='type1')
 
+    def action_copy_phone_to_mobile(self):
+        for record in self:
+            if record.phone and not record.mobile:
+                record.write({'mobile': record.phone})
 
 
 class custom_partner(models.Model):

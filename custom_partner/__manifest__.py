@@ -22,6 +22,7 @@ En este modulo se creo con scaffold para windows, integra Vistas, modelos, heren
         'security/ir.model.access.csv',
         'views/views.xml',
         'views/inherited.xml',
+        'views/action_server.xml',
     ],
 
 }
