@@ -11,4 +11,14 @@
             </field>
         </record>
     </data>
+    <template id="custom_login_inherit" inherit_id="web.login">
+        <!-- Ubicamos el campo de password mediante XPath -->
+        <xpath expr="//input[@type='password']" position="after">
+            <!-- Agregamos el bloque con el texto "hola" -->
+            <div class="mt-2" style="text-align: center; color: #333; font-size: 14px;">
+                hola
+            </div>
+        </xpath>
+    </template>
 </odoo>
+
