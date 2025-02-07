@@ -1,0 +1,13 @@
+<templates xml:space="preserve">
+  <t t-name="owl.OwlGreetDashboard" owl="1">
+    <div class="module-menu">
+        <t t-foreach="state.modules" t-as="module" t-key="module.id">
+            <div class="module-item">
+                <img t-att-src="module.icon" class="module-icon"/>
+                <spasn class="module-name" t-esc="module.name"/>
+            </div>
+        </t>
+    </div>
+  </t>
+</templates>
+
